@@ -52,6 +52,10 @@ const Registrar = () => {
         error: false,
       });
 
+      setTimeout(() => {
+        setAlerta({});
+      }, 10000);
+
       setNombre("");
       setEmail("");
       setPassword("");

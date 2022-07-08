@@ -27,6 +27,12 @@ const OlvidePassword = () => {
         msg: data.msg,
         error: false,
       });
+
+      setEmail("");
+
+      setTimeout(() => {
+        setAlerta({});
+      }, 10000);
     } catch (error) {
       setAlerta({
         msg: error.response.data.msg,
