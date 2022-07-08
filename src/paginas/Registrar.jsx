@@ -73,8 +73,6 @@ const Registrar = () => {
         <span className="text-slate-700">proyectos</span>
       </h1>
 
-      {msg && <Alerta alerta={alerta} />}
-
       <form
         className="my-10 bg-white shadow rounded-lg p-10"
         onSubmit={handleSubmit}
@@ -151,6 +149,8 @@ const Registrar = () => {
           value="Crear Cuenta"
           className="bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-sky-800 transition-colors"
         />
+
+        {msg && <Alerta alerta={alerta} />}
       </form>
 
       <nav className="lg:flex lg:justify-between">
