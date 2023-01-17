@@ -72,16 +72,16 @@ const Registrar = () => {
 
   return (
     <>
-      <h1 className="text-sky-600 font-black text-5xl text-center capitalize">
+      <h1 className="text-sky-600 font-black text-4xl text-center capitalize">
         Crea tu Cuenta y Administra tus {""}
         <span className="text-slate-700">proyectos</span>
       </h1>
 
       <form
-        className="my-10 bg-white shadow rounded-lg p-10"
+        className="my-3 bg-white shadow rounded-lg p-3"
         onSubmit={handleSubmit}
       >
-        <div className="my-5">
+        <div className="my-2">
           <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="nombre"
@@ -92,13 +92,13 @@ const Registrar = () => {
             id="nombre"
             type="text"
             placeholder="Tu Nombre"
-            className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
+            className="w-full mt-1 p-3 border rounded-xl bg-gray-50"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
           />
         </div>
 
-        <div className="my-5">
+        <div className="my-2">
           <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="email"
@@ -109,12 +109,12 @@ const Registrar = () => {
             id="email"
             type="email"
             placeholder="Email de Registro"
-            className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
+            className="w-full mt-1 p-3 border rounded-xl bg-gray-50"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="my-5">
+        <div className="my-2">
           <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="password"
@@ -125,13 +125,13 @@ const Registrar = () => {
             id="password"
             type="password"
             placeholder="Password de Registro"
-            className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
+            className="w-full mt-1 p-3 border rounded-xl bg-gray-50"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
 
-        <div className="my-5">
+        <div className="my-2">
           <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="password2"
@@ -142,11 +142,13 @@ const Registrar = () => {
             id="password2"
             type="password"
             placeholder="Repetir tu Password"
-            className="w-full mt-3 p-3 border rounded-xl bg-gray-50"
+            className="w-full mt-1 p-3 border rounded-xl bg-gray-50"
             value={repetirPassword}
             onChange={(e) => setRepetirPassword(e.target.value)}
           />
         </div>
+
+        {msg && <Alerta alerta={alerta} />}
 
         <input
           type="submit"
@@ -154,7 +156,7 @@ const Registrar = () => {
           className="bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-sky-800 transition-colors"
         />
 
-        {msg && <Alerta alerta={alerta} />}
+       
       </form>
 
       <nav className="lg:flex lg:justify-between">

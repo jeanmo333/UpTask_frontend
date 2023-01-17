@@ -45,18 +45,18 @@ const Login = () => {
 
   return (
     <>
-      <h1 className="text-sky-600 font-black text-5xl text-center capitalize">
+      <h1 className="text-sky-600 font-black text-4xl text-center capitalize">
         Inicia sesión y administra tus {""}
         <span className="text-slate-700">proyectos</span>
       </h1>
 
-      {msg && <Alerta alerta={alerta} />}
+     
 
       <form
-        className="my-10 bg-white shadow rounded-lg p-10"
+        className="my-5 bg-white shadow rounded-lg p-5"
         onSubmit={handleSubmit}
       >
-        <div className="my-5">
+        <div className="my-3">
           <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="email"
@@ -72,7 +72,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="my-5">
+        <div className="my-3">
           <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="password"
@@ -88,6 +88,8 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+
+        {msg && <Alerta alerta={alerta} />}
 
         <input
           type="submit"
